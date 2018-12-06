@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx parcel build .\"index.html",
+    "dev": "npx parcel .\"index.html"
   },
   "repository": {
     "type": "git",
@@ -17,9 +19,14 @@
   },
   "homepage": "https://github.com/yoshitaku-jp/write-blog-every-week#readme",
   "devDependencies": {
+    "@vue/component-compiler-utils": "^2.3.0",
     "babel-preset-env": "^1.7.0",
     "babel-preset-vue": "^2.0.2",
     "parcel-bundler": "^1.10.3",
-    "vue": "^2.5.17"
+    "vue": "^2.5.17",
+    "vue-template-compiler": "^2.5.17"
+  },
+  "dependencies": {
+    "vue-hot-reload-api": "^2.3.1"
   }
 }
