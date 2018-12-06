@@ -1,6 +1,6 @@
 <template>
     <nav class="page_header">
-      <p>page_header</p>
+      <h1>Write Blog Every Week</h1>
     </nav>
 </template>
 
@@ -9,3 +9,18 @@ export default {
   name: 'page-header',
 }
 </script>
+
+<style lang="scss" scoped>
+@font-face {
+  font-family: 'IsaaxFont';
+  src: url('~src/assets/fonts/IsaaxOrigin-Regular.woff2');
+}
+
+h1{
+  font-family: 'IsaaxFont';
+  text-align: center;
+  font-size: 64px;
+}
+
+
+</style>

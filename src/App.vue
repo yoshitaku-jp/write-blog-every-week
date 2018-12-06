@@ -1,7 +1,7 @@
 <template>
     <div id="app">
         <page-header></page-header>
-        <p>{{ greeting }} {{place}}!</p>
+        <p>Blog Posts</p>
         <page-footer></page-footer>
     </div>
 </template>

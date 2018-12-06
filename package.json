@@ -21,6 +21,7 @@
     "babel-preset-env": "^1.7.0",
     "babel-preset-vue": "^2.0.2",
     "parcel-bundler": "^1.10.3",
+    "sass": "^1.15.1",
     "vue": "^2.5.17",
     "vue-template-compiler": "^2.5.17"
   },
