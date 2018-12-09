@@ -18,6 +18,8 @@
   "homepage": "https://github.com/yoshitaku-jp/write-blog-every-week#readme",
   "devDependencies": {
     "@vue/component-compiler-utils": "^2.3.0",
+    "babel-core": "^6.26.3",
+    "babel-plugin-transform-inline-environment-variables": "^0.4.3",
     "babel-preset-env": "^1.7.0",
     "babel-preset-vue": "^2.0.2",
     "parcel-bundler": "^1.10.3",
@@ -26,6 +28,8 @@
     "vue-template-compiler": "^2.5.17"
   },
   "dependencies": {
+    "dotenv": "^6.2.0",
+    "firebase": "^5.7.0",
     "vue-hot-reload-api": "^2.3.1"
   }
 }

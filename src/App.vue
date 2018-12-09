@@ -1,7 +1,7 @@
 <template>
     <div id="app">
         <page-header></page-header>
-        <p>Blog Posts</p>
+        <posts></posts>        
         <page-footer></page-footer>
     </div>
 </template>
@@ -10,19 +10,18 @@
 import PageHeader from './components/PageHeader.vue';
 import PageFooter from './components/PageFooter.vue';
 
+import Posts from './Posts.vue';
 
 module.exports = {
     data: function () {
         return {
-            greeting: 'Hello',
-            place: 'Japan'
         }
     },
     components: {
         'PageHeader': PageHeader,
         'PageFooter': PageFooter,
+        'Posts': Posts,
     }
-
 }
 </script>
 
