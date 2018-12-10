@@ -13,13 +13,9 @@ import firebase from 'firebase'
 export default{
   name: 'Posts',
   created: function () {
-    var usersCollectionRef = db.collection('users');
-    this.todoRef = this.database.ref('posts')
+    const db = firebase.firestore();
+    const docRef = db.collection('users').doc('user');
 
-    var _this = this
-    this.todoRef.on('value', function (snapshot) {
-      _this.todos = snapshot.val()
-    })
   },
   data () {
     return {
