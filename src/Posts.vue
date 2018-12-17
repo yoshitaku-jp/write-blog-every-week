@@ -1,6 +1,6 @@
 <template>
     <div class="posts">
-        <h1>ブログ一覧</h1>
+
         <ul v-for="(todo, key) in todos" :key="todo.id">
             <li>{{ todo.name }}</li>
         </ul>
