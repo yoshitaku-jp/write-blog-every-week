@@ -79,4 +79,3 @@ typings/
 .dynamodb/ 
 
 .env.development
-dist/
