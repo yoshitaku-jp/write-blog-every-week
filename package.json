@@ -29,7 +29,9 @@
   },
   "dependencies": {
     "dotenv": "^6.2.0",
+    "feedparser": "^2.2.9",
     "firebase": "^5.7.0",
+    "request": "^2.88.0",
     "vue-hot-reload-api": "^2.3.1"
   }
 }
