@@ -11,6 +11,7 @@ var config = {
     storageBucket: process.env.NODE_STORAGE_BUCKET,
     messagingSenderId: process.env.NODE_MESSAGING_SENDER_ID
 }
+
 firebase.initializeApp(config)
 
 new Vue({

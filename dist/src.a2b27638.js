@@ -8229,11 +8229,7 @@ if (inBrowser) {
 
 var _default = Vue;
 exports.default = _default;
-<<<<<<< HEAD
 },{}],"node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
-=======
-},{}],"../../.npm/_npx/50619/lib/node_modules/parcel/src/builtins/bundle-url.js":[function(require,module,exports) {
->>>>>>> df8000edee6b3eb8b5cabde44821351bc4cf7c51
 var bundleURL = null;
 
 function getBundleURLCached() {
@@ -8265,11 +8261,7 @@ function getBaseURL(url) {
 
 exports.getBundleURL = getBundleURLCached;
 exports.getBaseURL = getBaseURL;
-<<<<<<< HEAD
 },{}],"node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
-=======
-},{}],"../../.npm/_npx/50619/lib/node_modules/parcel/src/builtins/css-loader.js":[function(require,module,exports) {
->>>>>>> df8000edee6b3eb8b5cabde44821351bc4cf7c51
 var bundle = require('./bundle-url');
 
 function updateLink(link) {
@@ -8304,11 +8296,7 @@ function reloadCSS() {
 }
 
 module.exports = reloadCSS;
-<<<<<<< HEAD
 },{"./bundle-url":"node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"node_modules/vue-hot-reload-api/dist/index.js":[function(require,module,exports) {
-=======
-},{"./bundle-url":"../../.npm/_npx/50619/lib/node_modules/parcel/src/builtins/bundle-url.js"}],"node_modules/vue-hot-reload-api/dist/index.js":[function(require,module,exports) {
->>>>>>> df8000edee6b3eb8b5cabde44821351bc4cf7c51
 var Vue // late bind
 var version
 var map = Object.create(null)
@@ -8570,16 +8558,6 @@ var _default = {
   name: 'page-header'
 };
 exports.default = _default;
-<<<<<<< HEAD
-        var $de3078 = exports.default || module.exports;
-      
-      if (typeof $de3078 === 'function') {
-        $de3078 = $de3078.options;
-      }
-    
-        /* template */
-        Object.assign($de3078, (function () {
-=======
         var $c8a749 = exports.default || module.exports;
       
       if (typeof $c8a749 === 'function') {
@@ -8588,7 +8566,6 @@ exports.default = _default;
     
         /* template */
         Object.assign($c8a749, (function () {
->>>>>>> df8000edee6b3eb8b5cabde44821351bc4cf7c51
           var render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -8611,11 +8588,7 @@ render._withStripped = true
             render: render,
             staticRenderFns: staticRenderFns,
             _compiled: true,
-<<<<<<< HEAD
-            _scopeId: "data-v-de3078",
-=======
             _scopeId: "data-v-c8a749",
->>>>>>> df8000edee6b3eb8b5cabde44821351bc4cf7c51
             functional: undefined
           };
         })());
@@ -8628,15 +8601,9 @@ render._withStripped = true
         if (api.compatible) {
           module.hot.accept();
           if (!module.hot.data) {
-<<<<<<< HEAD
-            api.createRecord('$de3078', $de3078);
-          } else {
-            api.reload('$de3078', $de3078);
-=======
             api.createRecord('$c8a749', $c8a749);
           } else {
             api.reload('$c8a749', $c8a749);
->>>>>>> df8000edee6b3eb8b5cabde44821351bc4cf7c51
           }
         }
 
@@ -8647,11 +8614,74 @@ render._withStripped = true
       
       }
     })();
-<<<<<<< HEAD
-},{"C:\\workspace\\write-blog-every-week\\src\\assets\\fonts\\IsaaxOrigin-Regular.woff2":[["IsaaxOrigin-Regular.d25c9fac.woff2","src/assets/fonts/IsaaxOrigin-Regular.woff2"],"src/assets/fonts/IsaaxOrigin-Regular.woff2"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.runtime.esm.js"}],"src/components/PageFooter.vue":[function(require,module,exports) {
-=======
-},{"/Users/yoshitaku/workspace/write-blog-every-week/src/assets/fonts/IsaaxOrigin-Regular.woff2":[["IsaaxOrigin-Regular.d25c9fac.woff2","src/assets/fonts/IsaaxOrigin-Regular.woff2"],"src/assets/fonts/IsaaxOrigin-Regular.woff2"],"_css_loader":"../../.npm/_npx/50619/lib/node_modules/parcel/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.runtime.esm.js"}],"src/components/PageFooter.vue":[function(require,module,exports) {
->>>>>>> df8000edee6b3eb8b5cabde44821351bc4cf7c51
+},{"/Users/yoshitaku/workspace/write-blog-every-week/src/assets/fonts/IsaaxOrigin-Regular.woff2":[["IsaaxOrigin-Regular.d25c9fac.woff2","src/assets/fonts/IsaaxOrigin-Regular.woff2"],"src/assets/fonts/IsaaxOrigin-Regular.woff2"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.runtime.esm.js"}],"../../.npm/_npx/50619/lib/node_modules/parcel/src/builtins/bundle-url.js":[function(require,module,exports) {
+var bundleURL = null;
+
+function getBundleURLCached() {
+  if (!bundleURL) {
+    bundleURL = getBundleURL();
+  }
+
+  return bundleURL;
+}
+
+function getBundleURL() {
+  // Attempt to find the URL of the current script and use that as the base URL
+  try {
+    throw new Error();
+  } catch (err) {
+    var matches = ('' + err.stack).match(/(https?|file|ftp):\/\/[^)\n]+/g);
+
+    if (matches) {
+      return getBaseURL(matches[0]);
+    }
+  }
+
+  return '/';
+}
+
+function getBaseURL(url) {
+  return ('' + url).replace(/^((?:https?|file|ftp):\/\/.+)\/[^/]+$/, '$1') + '/';
+}
+
+exports.getBundleURL = getBundleURLCached;
+exports.getBaseURL = getBaseURL;
+},{}],"../../.npm/_npx/50619/lib/node_modules/parcel/src/builtins/css-loader.js":[function(require,module,exports) {
+var bundle = require('./bundle-url');
+
+function updateLink(link) {
+  var newLink = link.cloneNode();
+
+  newLink.onload = function () {
+    link.remove();
+  };
+
+  newLink.href = link.href.split('?')[0] + '?' + Date.now();
+  link.parentNode.insertBefore(newLink, link.nextSibling);
+}
+
+var cssTimeout = null;
+
+function reloadCSS() {
+  if (cssTimeout) {
+    return;
+  }
+
+  cssTimeout = setTimeout(function () {
+    var links = document.querySelectorAll('link[rel="stylesheet"]');
+
+    for (var i = 0; i < links.length; i++) {
+      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
+        updateLink(links[i]);
+      }
+    }
+
+    cssTimeout = null;
+  }, 50);
+}
+
+module.exports = reloadCSS;
+},{"./bundle-url":"../../.npm/_npx/50619/lib/node_modules/parcel/src/builtins/bundle-url.js"}],"src/components/PageFooter.vue":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -8671,16 +8701,6 @@ var _default = {
   name: 'page-footer'
 };
 exports.default = _default;
-<<<<<<< HEAD
-        var $6376cd = exports.default || module.exports;
-      
-      if (typeof $6376cd === 'function') {
-        $6376cd = $6376cd.options;
-      }
-    
-        /* template */
-        Object.assign($6376cd, (function () {
-=======
         var $76390e = exports.default || module.exports;
       
       if (typeof $76390e === 'function') {
@@ -8689,7 +8709,6 @@ exports.default = _default;
     
         /* template */
         Object.assign($76390e, (function () {
->>>>>>> df8000edee6b3eb8b5cabde44821351bc4cf7c51
           var render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -8737,11 +8756,7 @@ render._withStripped = true
             render: render,
             staticRenderFns: staticRenderFns,
             _compiled: true,
-<<<<<<< HEAD
-            _scopeId: "data-v-6376cd",
-=======
             _scopeId: "data-v-76390e",
->>>>>>> df8000edee6b3eb8b5cabde44821351bc4cf7c51
             functional: undefined
           };
         })());
@@ -8754,15 +8769,9 @@ render._withStripped = true
         if (api.compatible) {
           module.hot.accept();
           if (!module.hot.data) {
-<<<<<<< HEAD
-            api.createRecord('$6376cd', $6376cd);
-          } else {
-            api.reload('$6376cd', $6376cd);
-=======
             api.createRecord('$76390e', $76390e);
           } else {
             api.reload('$76390e', $76390e);
->>>>>>> df8000edee6b3eb8b5cabde44821351bc4cf7c51
           }
         }
 
@@ -8773,11 +8782,7 @@ render._withStripped = true
       
       }
     })();
-<<<<<<< HEAD
-},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.runtime.esm.js"}],"node_modules/@firebase/polyfill/node_modules/whatwg-fetch/fetch.js":[function(require,module,exports) {
-=======
 },{"_css_loader":"../../.npm/_npx/50619/lib/node_modules/parcel/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.runtime.esm.js"}],"node_modules/@firebase/polyfill/node_modules/whatwg-fetch/fetch.js":[function(require,module,exports) {
->>>>>>> df8000edee6b3eb8b5cabde44821351bc4cf7c51
 (function(self) {
   'use strict';
 
@@ -23040,11 +23045,7 @@ function setLogLevel(level) {
     inst.logLevel = level;
   });
 }
-<<<<<<< HEAD
-},{}],"node_modules/process/browser.js":[function(require,module,exports) {
-=======
 },{}],"../../.npm/_npx/50619/lib/node_modules/parcel/node_modules/process/browser.js":[function(require,module,exports) {
->>>>>>> df8000edee6b3eb8b5cabde44821351bc4cf7c51
 
 // shim for using process in browser
 var process = module.exports = {}; // cached from whatever global is present so that test runners that stub it
@@ -38609,11 +38610,7 @@ exports.ServerValue = ServerValue;
 exports.DataSnapshot = DataSnapshot;
 exports.OnDisconnect = OnDisconnect;
 
-<<<<<<< HEAD
-},{"@firebase/util":"node_modules/@firebase/util/dist/index.cjs.js","@firebase/logger":"node_modules/@firebase/logger/dist/index.esm.js","tslib":"node_modules/tslib/tslib.es6.js","@firebase/app":"node_modules/@firebase/app/dist/index.cjs.js","process":"node_modules/process/browser.js"}],"node_modules/@firebase/webchannel-wrapper/dist/index.esm.js":[function(require,module,exports) {
-=======
 },{"@firebase/util":"node_modules/@firebase/util/dist/index.cjs.js","@firebase/logger":"node_modules/@firebase/logger/dist/index.esm.js","tslib":"node_modules/tslib/tslib.es6.js","@firebase/app":"node_modules/@firebase/app/dist/index.cjs.js","process":"../../.npm/_npx/50619/lib/node_modules/parcel/node_modules/process/browser.js"}],"node_modules/@firebase/webchannel-wrapper/dist/index.esm.js":[function(require,module,exports) {
->>>>>>> df8000edee6b3eb8b5cabde44821351bc4cf7c51
 var global = arguments[3];
 "use strict";
 
@@ -75166,22 +75163,17 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var _default = {
   name: 'Posts',
   created: function created() {
-<<<<<<< HEAD
-    this.database = _firebase.default.database();
-    this.wbewRef = this.database.ref('/write-blog-every-week/users');
+    var database = _firebase.default.database();
+
+    var wbewRef = database.ref('write-blog-every-week');
 
     var _this = this;
 
-    this.wbewRef.on('value', function (snapshot) {
+    wbewRef.on('value', function (snapshot) {
       console.log(snapshot.val());
       _this.users = snapshot.val();
       console.log(_this.users);
     });
-=======
-    var db = _firebase.default.firestore();
-
-    var docRef = db.collection('users').doc('user');
->>>>>>> df8000edee6b3eb8b5cabde44821351bc4cf7c51
   },
   data: function data() {
     return {
@@ -75192,16 +75184,6 @@ var _default = {
   }
 };
 exports.default = _default;
-<<<<<<< HEAD
-        var $ec50bb = exports.default || module.exports;
-      
-      if (typeof $ec50bb === 'function') {
-        $ec50bb = $ec50bb.options;
-      }
-    
-        /* template */
-        Object.assign($ec50bb, (function () {
-=======
         var $8f92d3 = exports.default || module.exports;
       
       if (typeof $8f92d3 === 'function') {
@@ -75210,7 +75192,6 @@ exports.default = _default;
     
         /* template */
         Object.assign($8f92d3, (function () {
->>>>>>> df8000edee6b3eb8b5cabde44821351bc4cf7c51
           var render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -75218,7 +75199,6 @@ exports.default = _default;
   return _c(
     "div",
     { staticClass: "posts" },
-<<<<<<< HEAD
     [
       _c("h1", [_vm._v("ブログ一覧")]),
       _vm._v(" "),
@@ -75229,12 +75209,6 @@ exports.default = _default;
       })
     ],
     2
-=======
-    _vm._l(_vm.todos, function(todo, key) {
-      return _c("ul", { key: todo.id }, [_c("li", [_vm._v(_vm._s(todo.name))])])
-    }),
-    0
->>>>>>> df8000edee6b3eb8b5cabde44821351bc4cf7c51
   )
 }
 var staticRenderFns = []
@@ -75257,15 +75231,9 @@ render._withStripped = true
         if (api.compatible) {
           module.hot.accept();
           if (!module.hot.data) {
-<<<<<<< HEAD
-            api.createRecord('$ec50bb', $ec50bb);
-          } else {
-            api.reload('$ec50bb', $ec50bb);
-=======
             api.createRecord('$8f92d3', $8f92d3);
           } else {
             api.reload('$8f92d3', $8f92d3);
->>>>>>> df8000edee6b3eb8b5cabde44821351bc4cf7c51
           }
         }
 
@@ -75302,16 +75270,6 @@ module.exports = {
     'Posts': _Posts.default
   }
 };
-<<<<<<< HEAD
-        var $919a2e = exports.default || module.exports;
-      
-      if (typeof $919a2e === 'function') {
-        $919a2e = $919a2e.options;
-      }
-    
-        /* template */
-        Object.assign($919a2e, (function () {
-=======
         var $080380 = exports.default || module.exports;
       
       if (typeof $080380 === 'function') {
@@ -75320,7 +75278,6 @@ module.exports = {
     
         /* template */
         Object.assign($080380, (function () {
->>>>>>> df8000edee6b3eb8b5cabde44821351bc4cf7c51
           var render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -75345,11 +75302,7 @@ render._withStripped = true
             render: render,
             staticRenderFns: staticRenderFns,
             _compiled: true,
-<<<<<<< HEAD
             _scopeId: null,
-=======
-            _scopeId: "data-v-080380",
->>>>>>> df8000edee6b3eb8b5cabde44821351bc4cf7c51
             functional: undefined
           };
         })());
@@ -75362,26 +75315,16 @@ render._withStripped = true
         if (api.compatible) {
           module.hot.accept();
           if (!module.hot.data) {
-<<<<<<< HEAD
-            api.createRecord('$919a2e', $919a2e);
-          } else {
-            api.reload('$919a2e', $919a2e);
-=======
             api.createRecord('$080380', $080380);
           } else {
             api.reload('$080380', $080380);
->>>>>>> df8000edee6b3eb8b5cabde44821351bc4cf7c51
           }
         }
 
         
       }
     })();
-<<<<<<< HEAD
 },{"./components/PageHeader.vue":"src/components/PageHeader.vue","./components/PageFooter.vue":"src/components/PageFooter.vue","./Posts.vue":"src/Posts.vue","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.runtime.esm.js"}],"src/index.js":[function(require,module,exports) {
-=======
-},{"./components/PageHeader.vue":"src/components/PageHeader.vue","./components/PageFooter.vue":"src/components/PageFooter.vue","./Posts.vue":"src/Posts.vue","_css_loader":"../../.npm/_npx/50619/lib/node_modules/parcel/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.runtime.esm.js"}],"src/index.js":[function(require,module,exports) {
->>>>>>> df8000edee6b3eb8b5cabde44821351bc4cf7c51
 "use strict";
 
 var _vue = _interopRequireDefault(require("vue"));
@@ -75394,21 +75337,12 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 // Initialize Firebase
 var config = {
-<<<<<<< HEAD
   apiKey: "AIzaSyCq_CTzRTMAg9qwKnBHGcj_JyUsWY65Acc",
   authDomain: "write-blog-every-week.firebaseapp.com",
   databaseURL: "https://write-blog-every-week.firebaseio.com",
   projectId: "write-blog-every-week",
   storageBucket: "write-blog-every-week.appspot.com",
   messagingSenderId: "226463031234"
-=======
-  apiKey: undefined,
-  authDomain: undefined,
-  databaseURL: undefined,
-  projectId: undefined,
-  storageBucket: undefined,
-  messagingSenderId: undefined
->>>>>>> df8000edee6b3eb8b5cabde44821351bc4cf7c51
 };
 
 _firebase.default.initializeApp(config);
@@ -75419,11 +75353,7 @@ new _vue.default({
     return h(_App.default);
   }
 });
-<<<<<<< HEAD
 },{"vue":"node_modules/vue/dist/vue.runtime.esm.js","./App.vue":"src/App.vue","firebase":"node_modules/firebase/dist/index.cjs.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
-=======
-},{"vue":"node_modules/vue/dist/vue.runtime.esm.js","./App.vue":"src/App.vue","firebase":"node_modules/firebase/dist/index.cjs.js"}],"../../.npm/_npx/50619/lib/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
->>>>>>> df8000edee6b3eb8b5cabde44821351bc4cf7c51
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -75450,11 +75380,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-<<<<<<< HEAD
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64610" + '/');
-=======
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62000" + '/');
->>>>>>> df8000edee6b3eb8b5cabde44821351bc4cf7c51
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65245" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
@@ -75596,9 +75522,5 @@ function hmrAccept(bundle, id) {
     return hmrAccept(global.parcelRequire, id);
   });
 }
-<<<<<<< HEAD
 },{}]},{},["node_modules/parcel-bundler/src/builtins/hmr-runtime.js","src/index.js"], null)
-=======
-},{}]},{},["../../.npm/_npx/50619/lib/node_modules/parcel/src/builtins/hmr-runtime.js","src/index.js"], null)
->>>>>>> df8000edee6b3eb8b5cabde44821351bc4cf7c51
 //# sourceMappingURL=/src.a2b27638.map

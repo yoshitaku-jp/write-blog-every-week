@@ -13,11 +13,11 @@ import firebase from 'firebase'
 export default{
   name: 'Posts',
   created: function () {
-    this.database = firebase.database()
-    this.wbewRef = this.database.ref('/write-blog-every-week/users')
+    const database = firebase.database()
+    const wbewRef = database.ref('write-blog-every-week')
 
     var _this = this
-    this.wbewRef.on('value', function (snapshot) {
+    wbewRef.on('value', function (snapshot) {
       console.log(snapshot.val())
       _this.users = snapshot.val()
       console.log(_this.users)
