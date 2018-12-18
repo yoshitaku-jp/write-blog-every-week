@@ -13,10 +13,7 @@ import PageFooter from './components/PageFooter.vue';
 import Posts from './Posts.vue';
 
 module.exports = {
-    data: function () {
-        return {
-        }
-    },
+
     components: {
         'PageHeader': PageHeader,
         'PageFooter': PageFooter,
@@ -24,11 +21,3 @@ module.exports = {
     }
 }
 </script>
-
-<style scoped>
-    p {
-        font-size: 2em;
-        text-align: center;
-        color: blue;
-    }
-</style>

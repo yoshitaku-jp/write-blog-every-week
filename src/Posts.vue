@@ -1,10 +1,10 @@
 <template>
-    <div class="posts">
-        <h1>ブログ一覧</h1>
-        <ul v-for="(todo, key) in todos" :key="todo.id">
-            <li>{{ todo.name }}</li>
-        </ul>
-    </div>
+  <div class="posts">
+    <h1>ブログ一覧</h1>
+      <ul v-for="(user, key) in users" :key="user.id">
+        <li>{{ user.name }}</li>
+      </ul>
+   </div>
 </template>
 
 <script>
@@ -13,37 +13,31 @@ import firebase from 'firebase'
 export default{
   name: 'Posts',
   created: function () {
-    var usersCollectionRef = db.collection('users');
-    this.todoRef = this.database.ref('posts')
+    this.database = firebase.database()
+    this.wbewRef = this.database.ref('/write-blog-every-week/users')
 
     var _this = this
-    this.todoRef.on('value', function (snapshot) {
-      _this.todos = snapshot.val()
+    this.wbewRef.on('value', function (snapshot) {
+      console.log(snapshot.val())
+      _this.users = snapshot.val()
+      console.log(_this.users)
     })
   },
   data () {
     return {
       database: null,
-      todoRef: null,
-      newTodoName: '',
-      showTodoType: 'all',
-      todos: []
+      wbewRef: null,
+      users: []
     }
   },
-  methods: {
-    createTodo: function (newTodoName) {
-      if (newTodoName === '') { return }
-      console.log(newTodoName)
-      this.todoRef.push({
-        name: this.newTodoName
-      })
-      this.newTodoName = ''
-    },
-    deleteTodo: function (todo) {
-      console.log(todo)
-      this.todoRef.child(todo).remove()
-    }
-  }
 }
 
 </script>
+
+<style>
+
+h1 {
+  text-align: center
+}
+
+</style>
