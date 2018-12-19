@@ -38,7 +38,7 @@ feedparser.on('end', function() {
   var posts = {};
 
   number = 0;
-  items.forEach(function(item) {
+  items.some(function(item) {
     var post = "post_" + number
     console.log(post);
 
@@ -50,6 +50,10 @@ feedparser.on('end', function() {
     posts[post]["date"] = item.pubdate;
 
     number = number + 1;
+    if (number == "5"){
+      return true;
+  }
+
     console.log('- [' + item.title + ']' + '(' + item.link + ')'　+ item.pubdate);
   });
 
