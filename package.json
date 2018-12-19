@@ -28,6 +28,7 @@
     "vue-template-compiler": "^2.5.21"
   },
   "dependencies": {
+    "date-utils": "^1.2.21",
     "dotenv": "^6.2.0",
     "feedparser": "^2.2.9",
     "firebase": "^5.7.0",

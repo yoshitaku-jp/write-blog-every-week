@@ -7,6 +7,8 @@ var FeedParser = require('feedparser');
 var request = require('request');  
 var feed = 'https://yoshitaku-jp.hatenablog.com/rss';
 
+var date_utils = require('date-utils');
+
 // Import Admin SDK
 var firebase = require("firebase");
 
@@ -40,14 +42,15 @@ feedparser.on('end', function() {
   number = 0;
   items.some(function(item) {
     var post = "post_" + number
-    console.log(post);
+//    console.log(post);
 
     posts[post] = {};
-    console.log(posts[post]);
+//    console.log(posts[post]);
+    var format_pubdate = item.pubdate.toFormat('YYYY/MM/DD');
 
     posts[post]["title"] = item.title;
     posts[post]["url"] = item.link;
-    posts[post]["date"] = item.pubdate;
+    posts[post]["date"] = format_pubdate;
 
     number = number + 1;
     if (number == "5"){
