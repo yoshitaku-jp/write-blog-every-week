@@ -1,6 +1,5 @@
 <template>
   <div class="posts">
-    <h1>ブログ一覧</h1>
       <ul v-for="(user, key) in users" :key="user.id">
         <li>アカウント名：{{ user.name }}</li>
         <ul v-for="(post, key) in user.posts" :key="post.id">
