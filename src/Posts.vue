@@ -4,7 +4,7 @@
       <ul v-for="(user, key) in users" :key="user.id">
         <li>アカウント名：{{ user.name }}</li>
         <ul v-for="(post, key) in user.posts" :key="post.id">
-          <li><a v-bind:href="post.url" target="_blank"> 記事名：{{ post.title }} </a></li>
+          <li>記事名： <a v-bind:href="post.url" target="_blank"> {{ post.title }} </a></li>
           <li>投稿された日：{{ post.date }}</li>
         </ul>
       </ul>
