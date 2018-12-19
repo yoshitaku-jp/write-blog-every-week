@@ -30,6 +30,38 @@ feedparser.on('readable', function() {
 feedparser.on('end', function() {  
   // show titles
   items.forEach(function(item) {
-    console.log('- [' + item.title + ']' + '(' + item.link + ')'　+ item.pubdate);
+    //console.log('- [' + item.title + ']' + '(' + item.link + ')'　+ item.pubdate);
   });
+});
+
+// Import Admin SDK
+var firebase = require("firebase");
+
+// Initialize Firebase
+var config = {
+  apiKey: process.env.NODE_API_KEY,
+  authDomain: process.env.NODE_AUTH_DOMAIN,
+  databaseURL: process.env.NODE_DATABASE_URL,
+  projectId: process.env.NODE_PROJECT_ID,
+  storageBucket: process.env.NODE_STORAGE_BUCKET,
+  messagingSenderId: process.env.NODE_MESSAGING_SENDER_ID
+}
+
+firebase.initializeApp(config)
+
+
+// Get a database reference to our blog
+var db = firebase.database();
+var ref = db.ref("server/saving-data/fireblog");
+
+var usersRef = ref.child("users");
+usersRef.set({
+  alanisawesome: {
+    date_of_birth: "June 23, 1912",
+    full_name: "Alan Turing"
+  },
+  gracehop: {
+    date_of_birth: "December 9, 1906",
+    full_name: "Grace Hopper"
+  }
 });
