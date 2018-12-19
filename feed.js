@@ -52,16 +52,42 @@ firebase.initializeApp(config)
 
 // Get a database reference to our blog
 var db = firebase.database();
-var ref = db.ref("server/saving-data/fireblog");
+var ref = db.ref("users");
 
 var usersRef = ref.child("users");
-usersRef.set({
-  alanisawesome: {
-    date_of_birth: "June 23, 1912",
-    full_name: "Alan Turing"
-  },
-  gracehop: {
-    date_of_birth: "December 9, 1906",
-    full_name: "Grace Hopper"
-  }
-});
+function setFeedData(meta,item){
+  user = meta.author
+
+  date = item.pubdate
+  title = item.title
+  url = item.pubdate
+
+  usersRef.set({
+    user: {
+      name: user,
+      "posts": {
+        "post1": {
+          "date": date,
+          "title": title,
+          "url": url
+        }
+      }
+    }
+  });
+}
+
+setFeedData(meta,item)
+//var db = firebase.database();
+//var ref = db.ref("server/saving-data/fireblog");
+
+//var usersRef = ref.child("users");
+//usersRef.set({
+//  alanisawesome: {
+//    date_of_birth: "June 23, 1912",
+//    full_name: "Alan Turing"
+//  },
+//  gracehop: {
+//    date_of_birth: "December 9, 1906",
+//    full_name: "Grace Hopper"
+//  }
+//});
