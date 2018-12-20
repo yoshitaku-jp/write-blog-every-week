@@ -28,7 +28,7 @@ firebase.initializeApp(config)
 var req = request(feed);  
 var feedparser = new FeedParser({});
 
-var author = "yoshitaku_jp";
+var author = "yoshitaku-jp";
 var items = [];
 
 req.on('response', function (res) {  
@@ -53,7 +53,7 @@ feedparser.on('end', function() {
     posts[post]["date"] = format_pubdate;
 
     number = number + 1;
-    if (number == "5"){
+    if (number == "3"){
       return true;
   }
 
