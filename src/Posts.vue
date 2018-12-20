@@ -4,7 +4,7 @@
         <ul v-for="(user, key) in users" :key="user.id">
           <div class=box>
             <div class="box_header">
-              <img id="icon" src=''>
+              <img id="icon" :src="icon_url" >
               <h3> アカウント名：{{ user.name }} </h3>
             </div>
             <div class="box_contents">
@@ -30,16 +30,18 @@ export default{
     const database = firebase.database()
     const wbewRef = database.ref('users')
 
-    const ref = firebase.storage().ref().child('yasu.JPG');
-    ref.getDownloadURL().then(function(url){
-      document.getElementById('icon').src = url;
-    });
 
     var _this = this
+    const ref = firebase.storage().ref('/icons').child('yasu.JPG');
+    const url = ref.getDownloadURL().then(function(url){
+      console.log(url)
+
+      _this.icon_url = url;
+    });
+
+
     wbewRef.on('value', snapshot => {
-      console.log(snapshot.val())
       _this.users = snapshot.val()
-      console.log(_this.users)
     })
   },
   data () {
@@ -49,7 +51,7 @@ export default{
       ref: null,
       users: [],
       posts: [],
-      icon: {}
+      icon_url: null
     }
   }
 }
@@ -94,5 +96,9 @@ h3 {
   position: relative;
 }
 
+img {
+  width: 48px;
+  height: 48px;
+}
 
 </style>

@@ -8558,14 +8558,14 @@ var _default = {
   name: 'page-header'
 };
 exports.default = _default;
-        var $c8a749 = exports.default || module.exports;
+        var $de3078 = exports.default || module.exports;
       
-      if (typeof $c8a749 === 'function') {
-        $c8a749 = $c8a749.options;
+      if (typeof $de3078 === 'function') {
+        $de3078 = $de3078.options;
       }
     
         /* template */
-        Object.assign($c8a749, (function () {
+        Object.assign($de3078, (function () {
           var render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -8588,7 +8588,7 @@ render._withStripped = true
             render: render,
             staticRenderFns: staticRenderFns,
             _compiled: true,
-            _scopeId: "data-v-c8a749",
+            _scopeId: "data-v-de3078",
             functional: undefined
           };
         })());
@@ -8601,9 +8601,9 @@ render._withStripped = true
         if (api.compatible) {
           module.hot.accept();
           if (!module.hot.data) {
-            api.createRecord('$c8a749', $c8a749);
+            api.createRecord('$de3078', $de3078);
           } else {
-            api.reload('$c8a749', $c8a749);
+            api.reload('$de3078', $de3078);
           }
         }
 
@@ -8614,7 +8614,7 @@ render._withStripped = true
       
       }
     })();
-},{"/Users/yoshitaku/workspace/write-blog-every-week/src/assets/fonts/IsaaxOrigin-Regular.woff2":[["IsaaxOrigin-Regular.d25c9fac.woff2","src/assets/fonts/IsaaxOrigin-Regular.woff2"],"src/assets/fonts/IsaaxOrigin-Regular.woff2"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.runtime.esm.js"}],"src/components/PageFooter.vue":[function(require,module,exports) {
+},{"C:\\workspace\\write-blog-every-week\\src\\assets\\fonts\\IsaaxOrigin-Regular.woff2":[["IsaaxOrigin-Regular.d25c9fac.woff2","src/assets/fonts/IsaaxOrigin-Regular.woff2"],"src/assets/fonts/IsaaxOrigin-Regular.woff2"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.runtime.esm.js"}],"src/components/PageFooter.vue":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -8634,14 +8634,14 @@ var _default = {
   name: 'page-footer'
 };
 exports.default = _default;
-        var $76390e = exports.default || module.exports;
+        var $6376cd = exports.default || module.exports;
       
-      if (typeof $76390e === 'function') {
-        $76390e = $76390e.options;
+      if (typeof $6376cd === 'function') {
+        $6376cd = $6376cd.options;
       }
     
         /* template */
-        Object.assign($76390e, (function () {
+        Object.assign($6376cd, (function () {
           var render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -8689,7 +8689,7 @@ render._withStripped = true
             render: render,
             staticRenderFns: staticRenderFns,
             _compiled: true,
-            _scopeId: "data-v-76390e",
+            _scopeId: "data-v-6376cd",
             functional: undefined
           };
         })());
@@ -8702,9 +8702,9 @@ render._withStripped = true
         if (api.compatible) {
           module.hot.accept();
           if (!module.hot.data) {
-            api.createRecord('$76390e', $76390e);
+            api.createRecord('$6376cd', $6376cd);
           } else {
-            api.reload('$76390e', $76390e);
+            api.reload('$6376cd', $6376cd);
           }
         }
 
@@ -75114,18 +75114,16 @@ var _default = {
 
     var wbewRef = database.ref('users');
 
-    var ref = _firebase.default.storage().ref().child('icons/yasu.JPG');
-
-    ref.getDownloadURL().then(function (url) {
-      document.getElementById('icon').src = url;
-    });
-
     var _this = this;
 
+    var ref = _firebase.default.storage().ref('/icons').child('yasu.JPG');
+
+    var url = ref.getDownloadURL().then(function (url) {
+      console.log(url);
+      _this.icon_url = url;
+    });
     wbewRef.on('value', function (snapshot) {
-      console.log(snapshot.val());
       _this.users = snapshot.val();
-      console.log(_this.users);
     });
   },
   data: function data() {
@@ -75135,19 +75133,19 @@ var _default = {
       ref: null,
       users: [],
       posts: [],
-      icon: {}
+      icon_url: null
     };
   }
 };
 exports.default = _default;
-        var $8f92d3 = exports.default || module.exports;
+        var $ec50bb = exports.default || module.exports;
       
-      if (typeof $8f92d3 === 'function') {
-        $8f92d3 = $8f92d3.options;
+      if (typeof $ec50bb === 'function') {
+        $ec50bb = $ec50bb.options;
       }
     
         /* template */
-        Object.assign($8f92d3, (function () {
+        Object.assign($ec50bb, (function () {
           var render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -75160,12 +75158,7 @@ exports.default = _default;
         return _c("ul", { key: user.id }, [
           _c("div", { staticClass: "box" }, [
             _c("div", { staticClass: "box_header" }, [
-              _c("img", {
-                attrs: {
-                  id: "icon",
-                  src: _vm.serviceImages[_vm.service.fileName]
-                }
-              }),
+              _c("img", { attrs: { id: "icon", src: _vm.icon_url } }),
               _vm._v(" "),
               _c("h3", [_vm._v(" アカウント名：" + _vm._s(user.name) + " ")])
             ]),
@@ -75216,9 +75209,9 @@ render._withStripped = true
         if (api.compatible) {
           module.hot.accept();
           if (!module.hot.data) {
-            api.createRecord('$8f92d3', $8f92d3);
+            api.createRecord('$ec50bb', $ec50bb);
           } else {
-            api.reload('$8f92d3', $8f92d3);
+            api.reload('$ec50bb', $ec50bb);
           }
         }
 
@@ -75255,14 +75248,14 @@ module.exports = {
     'Posts': _Posts.default
   }
 };
-        var $080380 = exports.default || module.exports;
+        var $919a2e = exports.default || module.exports;
       
-      if (typeof $080380 === 'function') {
-        $080380 = $080380.options;
+      if (typeof $919a2e === 'function') {
+        $919a2e = $919a2e.options;
       }
     
         /* template */
-        Object.assign($080380, (function () {
+        Object.assign($919a2e, (function () {
           var render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -75300,9 +75293,9 @@ render._withStripped = true
         if (api.compatible) {
           module.hot.accept();
           if (!module.hot.data) {
-            api.createRecord('$080380', $080380);
+            api.createRecord('$919a2e', $919a2e);
           } else {
-            api.reload('$080380', $080380);
+            api.reload('$919a2e', $919a2e);
           }
         }
 
@@ -75365,7 +75358,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62195" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51431" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
