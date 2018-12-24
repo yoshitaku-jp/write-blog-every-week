@@ -75161,7 +75161,6 @@ exports.default = _default;
               _vm._l(user.posts, function(post, key) {
                 return _c("div", { key: post.id }, [
                   _c("div", { staticClass: "box_content" }, [
-                    _vm._v("\n                  タイトル："),
                     _c("a", { attrs: { href: post.url, target: "_blank" } }, [
                       _vm._v(" " + _vm._s(post.title) + " ")
                     ])

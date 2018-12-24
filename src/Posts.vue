@@ -9,7 +9,7 @@
             <div class="box_contents">
               <div v-for="(post, key) in user.posts" :key="post.id">
                 <div class="box_content">
-                  タイトル：<a v-bind:href="post.url" target="_blank"> {{ post.title }} </a>
+                  <a v-bind:href="post.url" target="_blank"> {{ post.title }} </a>
 <!--                  <span class="pubdate">投稿日：{{ post.date }}</span>-->
                 </div>
               </div>
