@@ -3,35 +3,35 @@
   font-family: "IsaaxFont";
   src: url("IsaaxOrigin-Regular.d25c9fac.woff2");
 }
-h1[data-v-de3078] {
+h1[data-v-c8a749] {
   font-family: "IsaaxFont";
   text-align: center;
   font-size: 64px;
 }
-footer[data-v-6376cd] {
+footer[data-v-76390e] {
 	bottom: 0;
 	width: 100%;
 	height: 50px;
 	position: absolute;
 }
-.links[data-v-6376cd] {
+.links[data-v-76390e] {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.links li[data-v-6376cd] {
+.links li[data-v-76390e] {
     position: relative;
     list-style: none;
     padding: 0 10px;
 }
-.links li[data-v-6376cd]:not(:first-child):before {
+.links li[data-v-76390e]:not(:first-child):before {
     position: absolute;
     content: '/';
     left: -3px;
     top: 2px;
     color: #000000;
 }
-.links li a[data-v-6376cd] {
+.links li a[data-v-76390e] {
     text-decoration: none;
     color: #000000;
 }.container {
