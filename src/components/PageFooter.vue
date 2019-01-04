@@ -1,7 +1,6 @@
 <template>
   <nav class="page_footer">
     <ul class="links">
-      <li><a class="link" href="https://join.slack.com/t/write-blog-every-week/shared_invite/enQtNDQwMjM1MjU3NTU2LWMzOGJkMTcyODQ1YTU3NDE2M2E3ZDUwMDNmODFhMDhmMTdhZGM0ODU1NDFhOTIyODRlYzg0ZDU2YjExZmZkMGI">Slack</a></li>
       <li><a class="link" href="https://twitter.com/yoshitaku_jp">このサイトを作った人</a></li>
     </ul>
   </nav>
