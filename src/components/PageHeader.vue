@@ -20,6 +20,7 @@ h1{
   font-family: 'IsaaxFont';
   text-align: center;
   font-size: 64px;
+  color: rgb(0, 0, 0);
 }
 
 
