@@ -8629,7 +8629,6 @@ exports.default = void 0;
 //
 //
 //
-//
 var _default = {
   name: 'page-footer'
 };
@@ -8655,20 +8654,6 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("nav", { staticClass: "page_footer" }, [
       _c("ul", { staticClass: "links" }, [
-        _c("li", [
-          _c(
-            "a",
-            {
-              staticClass: "link",
-              attrs: {
-                href:
-                  "https://join.slack.com/t/write-blog-every-week/shared_invite/enQtNDQwMjM1MjU3NTU2LWMzOGJkMTcyODQ1YTU3NDE2M2E3ZDUwMDNmODFhMDhmMTdhZGM0ODU1NDFhOTIyODRlYzg0ZDU2YjExZmZkMGI"
-              }
-            },
-            [_vm._v("Slack")]
-          )
-        ]),
-        _vm._v(" "),
         _c("li", [
           _c(
             "a",
@@ -75327,7 +75312,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63142" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52331" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
