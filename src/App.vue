@@ -13,10 +13,10 @@ import Posts from './Posts.vue';
 
 import VueGtm from 'vue-gtm';
 
-Vue.use(VueGtm, {
-    id: 'GTM-W6DPH4H', // Your GTM ID
-    enabled: true, // defaults to true. Plugin can be disabled by setting this to false for Ex: enabled: !!GDPR_Cookie (optional)
-  });
+//Vue.use(VueGtm, {
+//    id: 'GTM-W6DPH4H', // Your GTM ID
+//    enabled: true, // defaults to true. Plugin can be disabled by setting this to false for Ex: enabled: !!GDPR_Cookie (optional)
+//  });
 
 
 module.exports = {
