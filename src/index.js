@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import App from './App.vue';
-import firebase from 'firebase'
+import firebase from 'firebase';
+
 
 // Initialize Firebase
 var config = {
