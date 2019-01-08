@@ -28,10 +28,12 @@
     "vue-template-compiler": "^2.5.21"
   },
   "dependencies": {
+    "@google-cloud/storage": "^2.3.4",
     "date-utils": "^1.2.21",
     "dotenv": "^6.2.0",
     "feedparser": "^2.2.9",
     "firebase": "^5.7.0",
+    "materialize-css": "^1.0.0-rc.2",
     "request": "^2.88.0",
     "vue-hot-reload-api": "^2.3.1"
   }

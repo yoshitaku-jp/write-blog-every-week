@@ -1,24 +1,14 @@
 <template>
-  <div class="container">
-    <div class="posts">
-        <ul v-for="(user, key) in users" :key="user.id">
-          <div class=box>
-            <div class="box_header">
-              <img id="icon" :src="icon_url" >
-              <h3> アカウント名：{{ user.name }} </h3>
-            </div>
-            <div class="box_contents">
-              <div v-for="(post, key) in user.posts" :key="post.id">
-                <div class="box_content">
-                  記事名：<a v-bind:href="post.url" target="_blank"> {{ post.title }} </a>
-                  <span class="pubdate">投稿日：{{ post.date }}</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </ul>
-    </div>
-  </div>
+  <span class="container">
+      <ul class="box" v-for="(user, key) in users" :key="user.id">
+        <img id="icon" :src="user.icon">
+        <h3 > {{ user.name }} </h3>
+        
+        <div class="post" v-for="(post, key) in user.posts" :key="post.id">
+          <a v-bind:href="post.url" target="_blank"> {{ post.title }} </a>
+        </div>
+      </ul>
+  </span>
 </template>
 
 <script>
@@ -27,22 +17,15 @@ import firebase from 'firebase'
 export default{
   name: 'Posts',
   created: function () {
+
+    var _this = this
+
     const database = firebase.database()
     const wbewRef = database.ref('users')
 
-
-    var _this = this
-    const ref = firebase.storage().ref('/icons').child('yasu.JPG');
-    const url = ref.getDownloadURL().then(function(url){
-      console.log(url)
-
-      _this.icon_url = url;
-    });
-
-
     wbewRef.on('value', snapshot => {
       _this.users = snapshot.val()
-    })
+    });
   },
   data () {
     return {
@@ -50,8 +33,7 @@ export default{
       wbewRef: null,
       ref: null,
       users: [],
-      posts: [],
-      icon_url: null
+      posts: []
     }
   }
 }
@@ -61,18 +43,9 @@ export default{
 <style>
 .container {
   display: flex;
-  width: 800px;
-}
-
-.box_contents {
-  display: flex;
-  flex-direction: column;
-}
-
-.box_content {
-  display: flex;
-  flex-direction: row;
-  align-content: space-around;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
 }
 
 h1 {
@@ -83,22 +56,31 @@ h3 {
   text-align: left
 }
 
-.box {
-  width: 800px;
-  height: 200px;
-  margin: 13px;
-  box-shadow: 0 2px 8px rgba(0,0,0,.08);
-  border: 1px solid #eee;
-  border-radius: 8px;
-  text-align: left;
-  transition: all .3s;
-  background-size: cover;
-  position: relative;
-}
-
 img {
   width: 48px;
   height: 48px;
+}
+
+.posts {
+  border: 1px solid black;
+}
+
+.box {
+  width: 400px;
+  margin: 10px;
+  padding: 10px;
+
+  border: 1px solid black;
+}
+
+.box h3{
+  display:inline-block;
+  vertical-align:top;
+  text-align: right;
+}
+
+.post {
+ margin: 5px;
 }
 
 </style>

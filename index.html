@@ -9,10 +9,49 @@
     <meta property="og:image" content="https://firebasestorage.googleapis.com/v0/b/write-blog-every-week.appspot.com/o/ogp.png?alt=media&token=8f83c9fc-8887-437a-9abf-e873e10c3148" />
 
     <meta charset="utf-8">
-    <title>Write Blog Every Week test</title>
+    <title>Write Blog Every Week</title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-62740826-7"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-62740826-7');
+    </script>
   </head>
   <body>
-    <div id="app"></div>
-    <script src="./src/index.js" charset="utf-8"></script>
+    <div class="bk">
+      <div class="bkRGBA">
+        <div id="app"></div>
+        <script src="./src/index.js" charset="utf-8"></script>
+      </div>
+    </div>
   </body>
 </html>
+
+<style>
+body {
+  /* 画像を常に天地左右の中央に配置 */
+  background-position: center center;
+   
+  /* 画像をタイル状に繰り返し表示しない */
+  background-repeat: no-repeat;
+   
+  /* コンテンツの高さが画像の高さより大きい時、動かないように固定 */
+  background-attachment: fixed;
+   
+  /* 表示するコンテナの大きさに基づいて、背景画像を調整 */
+  background-size: cover;
+   
+
+
+  background-image: url("src/assets/images/NASA10.jpg");
+}
+
+.bkRGBA{
+  /* 背景画像の透過用css */
+  height: 100%;
+  background: rgba(255,255,255,0.5);
+}
+</style>
