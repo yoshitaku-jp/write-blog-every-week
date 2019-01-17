@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "format": ".node_modules/.bin/prettier \"src/**/*.{js,vue,css}\" --write",
     "build": "parcel build index.html --public-url ./"
   },
   "repository": {
