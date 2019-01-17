@@ -1,44 +1,42 @@
 <template>
   <span class="container">
-      <ul class="box" v-for="(user, key) in users" :key="user.id">
-        <img id="icon" :src="user.icon">
-        <h3 > {{ user.name }} </h3>
-        
-        <div class="post" v-for="(post, key) in user.posts" :key="post.id">
-          <a v-bind:href="post.url" target="_blank"> {{ post.title }} </a>
-        </div>
-      </ul>
+    <ul class="box" v-for="(user, key) in users" :key="user.id">
+      <img id="icon" :src="user.icon" />
+      <h3>{{ user.name }}</h3>
+
+      <div class="post" v-for="(post, key) in user.posts" :key="post.id">
+        <a v-bind:href="post.url" target="_blank"> {{ post.title }} </a>
+      </div>
+    </ul>
   </span>
 </template>
 
 <script>
+import firebase from "firebase/app";
 
-import firebase from 'firebase/app';
+export default {
+  name: "Posts",
+  created: function() {
+    var _this = this;
 
-export default{
-  name: 'Posts',
-  created: function () {
-
-    var _this = this
-
-    const database = firebase.database()
-    const wbewRef = database.ref('users')
-
-    wbewRef.on('value', snapshot => {
-      _this.users = snapshot.val()
+    const database = firebase.database();
+    const wbewRef = database.ref("users").orderByChild("pubdate_timestamp");
+    console.log(wbewRef);
+    wbewRef.once("value", snapshot => {
+      console.log(snapshot);
+      _this.users = snapshot.val();
     });
   },
-  data () {
+  data() {
     return {
       database: null,
       wbewRef: null,
       ref: null,
       users: [],
       posts: []
-    }
+    };
   }
-}
-
+};
 </script>
 
 <style>
@@ -50,11 +48,11 @@ export default{
 }
 
 h1 {
-  text-align: center
+  text-align: center;
 }
 
 h3 {
-  text-align: left
+  text-align: left;
 }
 
 img {
@@ -74,14 +72,13 @@ img {
   border: 1px solid black;
 }
 
-.box h3{
-  display:inline-block;
-  vertical-align:top;
+.box h3 {
+  display: inline-block;
+  vertical-align: top;
   text-align: right;
 }
 
 .post {
- margin: 5px;
+  margin: 5px;
 }
-
 </style>
