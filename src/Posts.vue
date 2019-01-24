@@ -1,6 +1,6 @@
 <template>
   <span class="container">
-    <ul class="box" v-for="(user, key) in users" :key="user.id">
+    <ul class="box" v-for="(user, key) in blogs" :key="user.id">
       <img id="icon" :src="user.icon">
       <h3>{{ user.name }}</h3>
 
@@ -22,15 +22,12 @@ export default {
 
     axios.get(URL).then(function(response) {
       _this.blogs = response.data;
+      console.log(_this.blogs);
     });
   },
   data() {
     return {
-      database: null,
-      wbewRef: null,
-      ref: null,
-      users: [],
-      posts: []
+      blogs: []
     };
   }
 };
