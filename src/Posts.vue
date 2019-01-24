@@ -1,30 +1,27 @@
 <template>
   <span class="container">
     <ul class="box" v-for="(user, key) in users" :key="user.id">
-      <img id="icon" :src="user.icon" />
+      <img id="icon" :src="user.icon">
       <h3>{{ user.name }}</h3>
 
       <div class="post" v-for="(post, key) in user.posts" :key="post.id">
-        <a v-bind:href="post.url" target="_blank"> {{ post.title }} </a>
+        <a v-bind:href="post.url" target="_blank">{{ post.title }}</a>
       </div>
     </ul>
   </span>
 </template>
 
 <script>
-import firebase from "firebase/app";
+import axios from "axios";
 
 export default {
   name: "Posts",
   created: function() {
     var _this = this;
+    const URL = "https://api-wbew.netlify.com/blogs.json";
 
-    const database = firebase.database();
-    const wbewRef = database.ref("users").orderByChild("pubdate_timestamp");
-    console.log(wbewRef);
-    wbewRef.once("value", snapshot => {
-      console.log(snapshot);
-      _this.users = snapshot.val();
+    axios.get(URL).then(function(response) {
+      _this.blogs = response.data;
     });
   },
   data() {

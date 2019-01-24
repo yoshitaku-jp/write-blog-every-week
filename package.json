@@ -20,6 +20,7 @@
   "homepage": "https://github.com/yoshitaku-jp/write-blog-every-week#readme",
   "devDependencies": {
     "@vue/component-compiler-utils": "^2.3.0",
+    "axios": "^0.18.0",
     "babel-core": "^6.26.3",
     "babel-plugin-transform-inline-environment-variables": "^0.4.3",
     "babel-preset-env": "^1.7.0",
