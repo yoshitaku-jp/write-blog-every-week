@@ -1,3 +1,3 @@
 [build]
   publish = "dist/"
-  command = "npm run build && curl -L \"https://script.google.com/macros/s/AKfycbz4DJeehNe7vFQ1ss9EDvnMy6HIjJgsY8aTNljSmCZlygBEi7w/exec?method=getFeed\" > dist/blogs.json "
+  command = "npm run build"
