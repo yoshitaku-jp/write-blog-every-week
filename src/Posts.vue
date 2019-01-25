@@ -16,6 +16,11 @@ import axios from "axios";
 
 export default {
   name: "Posts",
+  data() {
+    return {
+      blogs: []
+    };
+  },
   created: function() {
     var _this = this;
     const URL = "https://api-wbew.netlify.com/blogs.json";
@@ -25,10 +30,10 @@ export default {
       console.log(_this.blogs);
     });
   },
-  data() {
-    return {
-      blogs: []
-    };
+  computed: {
+    sorted: function() {
+      return _.orderBy(this.blogs, "pubdate_timestamp", this.order);
+    }
   }
 };
 </script>
