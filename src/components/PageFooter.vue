@@ -12,7 +12,7 @@
 
 <script>
 export default {
-  name: "page-footer"
+  name: 'page-footer'
 };
 </script>
 
@@ -36,7 +36,7 @@ footer {
 }
 .links li:not(:first-child):before {
   position: absolute;
-  content: "/";
+  content: '/';
   left: -3px;
   top: 2px;
   color: #000000;

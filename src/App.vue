@@ -7,16 +7,16 @@
 </template>
 
 <script>
-import PageHeader from "./components/PageHeader.vue";
-import PageFooter from "./components/PageFooter.vue";
-import Posts from "./Posts.vue";
+import PageHeader from './components/PageHeader.vue';
+import PageFooter from './components/PageFooter.vue';
+import Posts from './Posts.vue';
 
-import firebase from "firebase/app";
-import "firebase/database";
+import firebase from 'firebase/app';
+import 'firebase/database';
 
-import Vue from "vue";
+import Vue from 'vue';
 window.Vue = Vue;
-import VueGtm from "vue-gtm";
+import VueGtm from 'vue-gtm';
 
 // Initialize Firebase
 var config = {
@@ -31,7 +31,7 @@ var config = {
 firebase.initializeApp(config);
 
 Vue.use(VueGtm, {
-  id: "GTM-W6DPH4H",
+  id: 'GTM-W6DPH4H',
   enabled: true
 });
 
