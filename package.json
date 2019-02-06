@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "format": ".node_modules/.bin/prettier \"src/**/*.{js,vue,css}\" --write",
+    "format": "prettier \"src/**/*.{js,vue,css}\" --write --single-quote",
+    "lint": "eslint src/**/*.{js,vue}",
     "build": "parcel build index.html --public-url ./"
   },
   "repository": {
@@ -25,6 +26,7 @@
     "babel-plugin-transform-inline-environment-variables": "^0.4.3",
     "babel-preset-env": "^1.7.0",
     "babel-preset-vue": "^2.0.2",
+    "eslint": "^5.13.0",
     "parcel-bundler": "^1.10.3",
     "prettier": "^1.15.3",
     "sass": "^1.15.1",
@@ -35,6 +37,8 @@
     "@google-cloud/storage": "^2.3.4",
     "date-utils": "^1.2.21",
     "dotenv": "^6.2.0",
+    "eslint-config-vue": "^2.0.2",
+    "eslint-plugin-vue": "^5.0.0-beta.6",
     "feedparser": "^2.2.9",
     "firebase": "^5.7.0",
     "materialize-css": "^1.0.0-rc.2",
