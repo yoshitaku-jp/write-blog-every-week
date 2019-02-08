@@ -31,7 +31,7 @@ export default {
   },
   computed: {
     sortedBlogs: function() {
-      return _.orderBy(this.blogs, 'name');
+      return _.orderBy(this.blogs, 'published','desc');
     }
   }
 };
