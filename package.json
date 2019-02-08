@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "format": "prettier \"src/**/*.{js,vue,css}\" --write --single-quote",
+    "format": "prettier src/**/*.{js,vue,css} --write",
     "lint": "eslint src/**/*.{js,vue}",
+    "dev": "parcel index.html",
     "build": "parcel build index.html --public-url ./"
   },
   "repository": {
@@ -41,6 +42,7 @@
     "eslint-plugin-vue": "^5.0.0-beta.6",
     "feedparser": "^2.2.9",
     "firebase": "^5.7.0",
+    "lodash": "^4.17.11",
     "materialize-css": "^1.0.0-rc.2",
     "request": "^2.88.0",
     "vue-gtm": "^2.0.0",
