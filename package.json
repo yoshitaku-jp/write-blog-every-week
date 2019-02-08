@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "format": "prettier src/**/*.{js,vue,css} --write",
+    "format": "prettier src/**/*.{js,vue,css} --write --single-quote",
     "lint": "eslint src/**/*.{js,vue}",
     "dev": "parcel index.html",
     "build": "parcel build index.html --public-url ./"
