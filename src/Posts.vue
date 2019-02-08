@@ -1,10 +1,9 @@
 <template>
   <span class="container">
-    <ul class="box" v-for="(user) in blogs" :key="user.id">
-      <img id="icon" :src="user.icon" />
-      <h3>{{ user.name }}</h3>
-
-      <div class="post" v-for="(post) in user.posts" :key="post.id">
+    <ul class="box" v-for="blog in sortedBlogs" :key="blog.id">
+      <img id="icon" :src="blog.icon" />
+      <h3>{{ blog.name }}</h3>
+      <div class="post" v-for="post in blog.posts" :key="post.id">
         <a v-bind:href="post.url" target="_blank">{{ post.title }}</a>
       </div>
     </ul>
@@ -13,6 +12,7 @@
 
 <script>
 import axios from 'axios';
+import _ from 'lodash';
 
 export default {
   name: 'Posts',
@@ -30,8 +30,8 @@ export default {
     });
   },
   computed: {
-    sorted: function() {
-      return _.orderBy(this.blogs, 'pubdate_timestamp', this.order);
+    sortedBlogs: function() {
+      return _.orderBy(this.blogs, 'name');
     }
   }
 };
