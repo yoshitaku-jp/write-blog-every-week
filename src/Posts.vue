@@ -25,7 +25,6 @@ export default {
 
     axios.get(URL).then(function(response) {
       _this.blogs = response.data;
-      console.log(response.data)
     });
   },
   computed: {
