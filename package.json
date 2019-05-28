@@ -8,7 +8,7 @@
     "format": "prettier src/**/*.{js,vue,css} --write --single-quote",
     "lint": "eslint src/**/*.{js,vue}",
     "dev": "npm run format && parcel index.html",
-    "build": "parcel build index.html --public-url ./dist/"
+    "build": "parcel build index.html"
   },
   "repository": {
     "type": "git",
