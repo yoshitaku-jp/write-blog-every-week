@@ -1,11 +1,9 @@
 <template>
   <span class="container">
     <ul class="box" v-for="blog in sortedBlogs" :key="blog.id">
-      <img id="icon" :src="blog.icon" />
-      <h3>{{ blog.name }}</h3>
-      <div class="post" v-for="post in blog.posts" :key="post.id">
-        <a v-bind:href="post.url" target="_blank">{{ post.title }}</a>
-      </div>
+      <img id="icon" :src="blog.image" />
+      <h3>{{ blog.name }}</h3><br>
+        <a v-bind:href="blog.url" target="_blank">{{ blog.title }}</a>
     </ul>
   </span>
 </template>
@@ -23,7 +21,7 @@ export default {
   },
   created: function() {
     var _this = this;
-    const URL = 'https://api-wbew.netlify.com/blogs.json';
+    const URL = 'https://api-wbew-go.netlify.com/blogs.json';
 
     axios.get(URL).then(function(response) {
       _this.blogs = response.data;
