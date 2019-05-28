@@ -2,8 +2,9 @@
   <span class="container">
     <ul class="box" v-for="blog in sortedBlogs" :key="blog.id">
       <img id="icon" :src="blog.image" />
-      <h3>{{ blog.name }}</h3><br>
-        <a v-bind:href="blog.url" target="_blank">{{ blog.title }}</a>
+      <h3>{{ blog.name }}</h3>
+      <br />
+      <a v-bind:href="blog.url" target="_blank">{{ blog.title }}</a>
     </ul>
   </span>
 </template>
@@ -29,7 +30,7 @@ export default {
   },
   computed: {
     sortedBlogs: function() {
-      return _.orderBy(this.blogs, 'published','desc');
+      return _.orderBy(this.blogs, 'published', 'desc');
     }
   }
 };

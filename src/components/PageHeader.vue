@@ -1,6 +1,5 @@
 <template>
-  <nav class="page_header"><h1>Write Blog Every Week</h1>
-  </nav>
+  <nav class="page_header"><h1>Write Blog Every Week</h1></nav>
 </template>
 
 <script>
@@ -22,7 +21,7 @@ h1 {
   color: rgb(0, 0, 0);
 }
 
-ul li{
+ul li {
   text-align: left;
   list-style: none;
 }
