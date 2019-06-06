@@ -42,7 +42,6 @@
     "eslint-plugin-vue": "^5.2.2",
     "feedparser": "^2.2.9",
     "lodash": "^4.17.11",
-    "materialize-css": "^1.0.0",
     "request": "^2.88.0",
     "vue-gtm": "^2.0.0",
     "vue-hot-reload-api": "^2.3.3"
