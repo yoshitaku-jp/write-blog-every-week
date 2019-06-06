@@ -1,16 +1,19 @@
 <template>
   <div class="container">
-    <ul class="box" v-for="blog in sortedBlogs" :key="blog.id">
+    <ul class="box" v-for="info in sortedInfos" :key="info.id">
       <div class="box-header">
-        <h3>{{ blog.name }}</h3>
+        <a v-bind:href="info.blogurl" target="_blank">
+          <h3>{{ info.blogtitle }}</h3>
+        </a>
       </div>
       <div class="box-contents">
-        <a v-bind:href="blog.url" target="_blank">{{ blog.title }}</a>
+        <img id="thumbnail" :src="info.enclosures">
+        <a v-bind:href="info.url" target="_blank">{{ info.title }}</a>
       </div>
       <br>
       <div class="box-footer">
-        <img id="icon" :src="blog.image">
-        <h3>{{ blog.name }}</h3>
+        <img id="icon" :src="info.image">
+        <h3>{{ info.name }}</h3>
       </div>
     </ul>
   </div>
@@ -24,7 +27,7 @@ export default {
   name: "Posts",
   data() {
     return {
-      blogs: []
+      infos: []
     };
   },
   created: function() {
@@ -32,12 +35,13 @@ export default {
     const URL = "https://api-wbew-go.netlify.com/blogs.json";
 
     axios.get(URL).then(function(response) {
-      _this.blogs = response.data;
+      _this.infos = response.data;
     });
   },
   computed: {
-    sortedBlogs: function() {
-      return _.orderBy(this.blogs, "published", "desc");
+    sortedInfos: function() {
+      console.log(_.orderBy(this.infos, "published", "desc"));
+      return _.orderBy(this.infos, "published", "desc");
     }
   }
 };
@@ -65,8 +69,15 @@ export default {
   background: #c4c4c4;
 }
 
+.box-header a {
+  text-decoration: none;
+}
+
 .box-header h3 {
   text-align: center;
+
+  font-size: 24px;
+  color: #636363;
 }
 
 .box-footer img {
