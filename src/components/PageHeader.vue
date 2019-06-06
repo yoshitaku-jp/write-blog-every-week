@@ -6,14 +6,14 @@
 
 <script>
 export default {
-  name: "page-header"
+  name: 'page-header'
 };
 </script>
 
 <style lang="scss" scoped>
 @font-face {
-  font-family: "IsaaxFont";
-  src: url("~src/assets/fonts/IsaaxOrigin-Regular.woff2");
+  font-family: 'IsaaxFont';
+  src: url('~src/assets/fonts/IsaaxOrigin-Regular.woff2');
 }
 
 nav {
@@ -32,7 +32,7 @@ nav h1 {
   height: 90px;
   margin: 0;
 
-  font-family: "IsaaxFont";
+  font-family: 'IsaaxFont';
   font-size: 64px;
   line-height: 75px;
   display: flex;

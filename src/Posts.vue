@@ -12,7 +12,7 @@
       </div>
       <br>
       <div class="box-footer">
-        <img id="icon" :src="info.image">
+        <img id="icon" :src="info.icon">
         <h3>{{ info.name }}</h3>
       </div>
     </ul>
