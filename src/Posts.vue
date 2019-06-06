@@ -1,20 +1,27 @@
 <template>
-  <span class="container">
+  <div class="container">
     <ul class="box" v-for="blog in sortedBlogs" :key="blog.id">
-      <img id="icon" :src="blog.image" />
-      <h3>{{ blog.name }}</h3>
-      <br />
-      <a v-bind:href="blog.url" target="_blank">{{ blog.title }}</a>
+      <div class="box-header">
+        <h3>{{ blog.name }}</h3>
+      </div>
+      <div class="box-contents">
+        <a v-bind:href="blog.url" target="_blank">{{ blog.title }}</a>
+      </div>
+      <br>
+      <div class="box-footer">
+        <img id="icon" :src="blog.image">
+        <h3>{{ blog.name }}</h3>
+      </div>
     </ul>
-  </span>
+  </div>
 </template>
 
 <script>
-import axios from 'axios';
-import _ from 'lodash';
+import axios from "axios";
+import _ from "lodash";
 
 export default {
-  name: 'Posts',
+  name: "Posts",
   data() {
     return {
       blogs: []
@@ -22,7 +29,7 @@ export default {
   },
   created: function() {
     var _this = this;
-    const URL = 'https://api-wbew-go.netlify.com/blogs.json';
+    const URL = "https://api-wbew-go.netlify.com/blogs.json";
 
     axios.get(URL).then(function(response) {
       _this.blogs = response.data;
@@ -30,7 +37,7 @@ export default {
   },
   computed: {
     sortedBlogs: function() {
-      return _.orderBy(this.blogs, 'published', 'desc');
+      return _.orderBy(this.blogs, "published", "desc");
     }
   }
 };
@@ -41,41 +48,35 @@ export default {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: auto;
-}
 
-h1 {
-  text-align: center;
-}
-
-h3 {
-  text-align: left;
-}
-
-img {
-  width: 48px;
-  height: 48px;
-}
-
-.posts {
-  border: 1px solid black;
+  padding-top: 10px;
+  margin-top: 90px;
+  height: auto;
+  padding-bottom: 10px;
+  margin-bottom: 80px;
 }
 
 .box {
   width: 400px;
+
   margin: 10px;
   padding: 10px;
 
-  border: 1px solid black;
+  background: #c4c4c4;
 }
 
-.box h3 {
+.box-header h3 {
+  text-align: center;
+}
+
+.box-footer img {
+  width: 48px;
+  height: 48px;
+}
+
+.box-footer h3 {
   display: inline-block;
   vertical-align: top;
   text-align: right;
-}
-
-.post {
-  margin: 5px;
 }
 </style>
