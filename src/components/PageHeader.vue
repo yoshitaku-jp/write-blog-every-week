@@ -1,7 +1,7 @@
 <template>
-  <nav class="page_header">
-    <h1>Write Blog Every Week</h1>
-  </nav>
+  <v-toolbar>
+    <v-toolbar-title ><h1>Write Blog Every Week</h1></v-toolbar-title>
+  </v-toolbar>
 </template>
 
 <script>
@@ -16,33 +16,13 @@ export default {
   src: url('~src/assets/fonts/IsaaxOrigin-Regular.woff2');
 }
 
-nav {
-  position: fixed;
-  width: 1440px;
-  height: 90px;
-  left: 0px;
-  top: 0px;
 
-  background: #000000;
-}
+h1 {
 
-nav h1 {
-  position: fixed;
-  width: 1440px;
-  height: 90px;
-  margin: 0;
 
   font-family: 'IsaaxFont';
-  font-size: 64px;
-  line-height: 75px;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  color: #ffffff;
+
 }
 
-ul li {
-  text-align: left;
-  list-style: none;
-}
+
 </style>
