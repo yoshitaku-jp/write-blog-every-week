@@ -1,22 +1,28 @@
 <template>
-  <div class="container">
-    <ul class="box" v-for="info in sortedInfos" :key="info.id">
-      <div class="box-header">
-        <a v-bind:href="info.blogurl" target="_blank">
-          <h3>{{ info.blogtitle }}</h3>
-        </a>
-      </div>
-      <div class="box-contents">
-        <img id="thumbnail" :src="info.enclosures">
-        <a v-bind:href="info.url" target="_blank">{{ info.title }}</a>
-      </div>
-      <br>
-      <div class="box-footer">
-        <img id="icon" :src="info.icon">
-        <h3>{{ info.name }}</h3>
-      </div>
-    </ul>
-  </div>
+  <v-card>
+    <v-layout row wrap>
+      <v-flex class="box" v-for="info in sortedInfos" :key="info.id">
+        <v-card class="mx-auto grey" light max-width="400">
+          <div>
+            <v-card-title>
+              <a v-bind:href="info.blogurl" target="_blank">
+                <h3>{{ info.blogtitle }}</h3>
+              </a>
+            </v-card-title>
+          </div>
+          <div>
+            <v-card-text>
+              <a v-bind:href="info.url" target="_blank">{{ info.title }}</a>
+            </v-card-text>
+            <v-avatar>
+              <img id="icon" :src="info.icon">
+            </v-avatar>
+            <h3>{{ info.name }}</h3>
+          </div>
+        </v-card>
+      </v-flex>
+    </v-layout>
+  </v-card>
 </template>
 
 <script>
