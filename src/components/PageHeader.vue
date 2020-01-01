@@ -1,7 +1,7 @@
 <template>
   <v-toolbar>
     <v-toolbar-title>
-      <h1 class="text-md-center">Write Blog Every Week</h1>
+      <p class="display-2 font-weight-black">Write Blog Every Week</p>
     </v-toolbar-title>
   </v-toolbar>
 </template>
@@ -11,14 +11,3 @@ export default {
   name: 'page-header'
 };
 </script>
-
-<style lang="scss" scoped>
-@font-face {
-  font-family: 'IsaaxFont';
-  src: url('~src/assets/fonts/IsaaxOrigin-Regular.woff2');
-}
-
-h1 {
-  font-family: 'IsaaxFont';
-}
-</style>
