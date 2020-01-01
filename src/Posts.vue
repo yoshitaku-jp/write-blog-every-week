@@ -1,47 +1,30 @@
 <template>
-  <v-card>
-    <v-layout row wrap>
-      <v-flex
-        class="justify-md-space-around"
-        v-for="blog in sortedBlogs"
-        :key="blog.id"
-      >
-        <v-card class="grey" :width="400">
-          <div class="box-header">
-            <v-card-title class="headline ">
-              <a
-                class="black--text text-decoration-none"
-                v-bind:href="blog.blogurl"
-                target="_blank"
-                >{{ blog.blogtitle }}</a
-              >
-            </v-card-title>
-          </div>
-          <div class="box-content">
-            <v-card-text>
-              <v-list-item-subtitle class="subtitle-1 text-center">今週のブログ</v-list-item-subtitle>
-              <hr />
-              <a
-                class="title black--text text-decoration-none"
-                v-bind:href="blog.url"
-                target="_blank"
-                >{{ blog.title }}</a
-              >
-            </v-card-text>
-          </div>
-          <div class="box-footer">
-            <h3>{{ blog.name }}</h3>
-            <v-img
-              id="icon"
-              width="48px"
-              height="48px"
-              :src="blog.icon"
-            ></v-img>
-          </div>
+  <v-container fluid grid-list-xl>
+    <v-layout wrap justify-space-around>
+      <v-flex v-for="blog in sortedBlogs" :key="blog.id">
+        <v-card class="grey ma-2 flexcard" width="400px" height="260px">
+
+          <v-card-title class="subtitle justify-center">
+            <v-list-tile :href="blog.blogurl" target="_blank" >{{ blog.blogtitle }}</v-list-tile>
+          </v-card-title>
+
+          <v-card-text class="grow headline">
+            <v-list-tile :href="blog.url" target="_blank">{{ blog.title }}</v-list-tile >
+          </v-card-text>
+
+          <v-card-actions>
+            <span>
+              <v-card-media width="48px" height="48px" :src="blog.icon"></v-card-media>
+            </span>
+            <span>
+              <v-card-text>{{ blog.name }}</v-card-text>
+            </span>
+          </v-card-actions>
+
         </v-card>
       </v-flex>
     </v-layout>
-  </v-card>
+  </v-container>
 </template>
 
 <script>
@@ -71,3 +54,10 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+.flexcard {
+  display: flex;
+  flex-direction: column;
+}
+</style>
