@@ -1,9 +1,9 @@
 <template>
-  <div id="app">
-    <page-header></page-header>
-    <posts></posts>
-    <page-footer></page-footer>
-  </div>
+  <v-app>
+      <page-header></page-header>
+      <posts></posts>
+      <page-footer></page-footer>
+  </v-app>
 </template>
 
 <script>
