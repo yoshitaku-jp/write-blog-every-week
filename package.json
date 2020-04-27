@@ -2,24 +2,29 @@
   "name": "write-blog-every-week",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "author": "",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "format": "prettier src/**/*.{js,vue,css} --write --single-quote",
+    "build": "parcel build index.html",
     "lint": "eslint src/**/*.{js,vue}",
     "dev": "npm run format && parcel index.html",
-    "build": "parcel build index.html"
+    "format": "prettier src/**/*.{js,vue,css} --write --single-quote",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/yoshitaku-jp/write-blog-every-week.git"
+  "main": "index.js",
+  "dependencies": {
+    "@google-cloud/storage": "^2.5.0",
+    "date-utils": "^1.2.21",
+    "dotenv": "^6.2.0",
+    "eslint-config-vue": "^2.0.2",
+    "eslint-plugin-vue": "^5.2.3",
+    "feedparser": "^2.2.9",
+    "lodash": "^4.17.15",
+    "request": "^2.88.2",
+    "update": "^0.7.4",
+    "vue-gtm": "^2.2.0",
+    "vue-hot-reload-api": "^2.3.4",
+    "vuetify": "^2.2.25"
   },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/yoshitaku-jp/write-blog-every-week/issues"
-  },
-  "homepage": "https://github.com/yoshitaku-jp/write-blog-every-week#readme",
   "devDependencies": {
     "@vue/component-compiler-utils": "^2.6.0",
     "axios": "^0.18.1",
@@ -30,21 +35,20 @@
     "eslint": "^5.16.0",
     "parcel-bundler": "^1.12.4",
     "prettier": "^1.19.1",
-    "sass": "^1.24.0",
+    "sass": "^1.26.5",
+    "sass-loader": "^8.0.0",
     "vue": "^2.6.11",
-    "vue-template-compiler": "^2.6.11"
+    "vue-cli-plugin-vuetify": "^2.0.5",
+    "vue-template-compiler": "^2.6.11",
+    "vuetify-loader": "^1.3.0"
   },
-  "dependencies": {
-    "@google-cloud/storage": "^2.5.0",
-    "date-utils": "^1.2.21",
-    "dotenv": "^6.2.0",
-    "eslint-config-vue": "^2.0.2",
-    "eslint-plugin-vue": "^5.2.3",
-    "feedparser": "^2.2.9",
-    "lodash": "^4.17.15",
-    "request": "^2.88.0",
-    "vue-gtm": "^2.2.0",
-    "vue-hot-reload-api": "^2.3.4",
-    "vuetify": "^1.5.21"
+  "bugs": {
+    "url": "https://github.com/yoshitaku-jp/write-blog-every-week/issues"
+  },
+  "homepage": "https://github.com/yoshitaku-jp/write-blog-every-week#readme",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yoshitaku-jp/write-blog-every-week.git"
   }
 }
