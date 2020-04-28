@@ -8,11 +8,11 @@
       <v-card
         class="grey ma-2"
         width="400px"
-        v-for="blog in sortedBlogs"
+        v-for="blog in blogs"
         :key="blog.id"
       >
         <v-list-item>
-          <v-avatar><v-img :src="blog.icon"></v-img></v-avatar>
+          <v-avatar><v-img :src="blog.user_icon"></v-img></v-avatar>
           <v-list-item-content>
             <v-list-item-title class="headline">
               <a
@@ -20,20 +20,20 @@
                 style="text-decoration: none;"
                 :href="blog.url"
                 target="_blank"
-                >{{ blog.blogtitle }}</a
+                >{{ blog.name }}</a
               >
             </v-list-item-title>
 
-            <v-list-item-subtitle>by {{ blog.name }}</v-list-item-subtitle>
+            <v-list-item-subtitle>by {{ blog.user_name }}</v-list-item-subtitle>
           </v-list-item-content>
         </v-list-item>
         <v-card-text>
           <a
             class="black--text"
             style="text-decoration: none;"
-            :href="blog.url"
+            :href="blog.entry_url"
             target="_blank"
-            >{{ blog.title }}</a
+            >{{ blog.entry_title }}</a
           >
         </v-card-text>
       </v-card>
@@ -54,17 +54,12 @@ export default {
   },
   created: function() {
     var _this = this;
-    const URL = 'https://api-wbew-go.netlify.app/blogs.json';
+    const URL = 'https://api-wbew.netlify.app/blogs.json';
 
     axios.get(URL).then(function(response) {
       _this.blogs = response.data;
     });
   },
-  computed: {
-    sortedBlogs: function() {
-      return _.orderBy(this.blogs, 'published', 'desc');
-    }
-  }
 };
 </script>
 
