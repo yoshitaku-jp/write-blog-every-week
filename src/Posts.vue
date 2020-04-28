@@ -12,7 +12,7 @@
         :key="blog.id"
       >
         <v-list-item>
-          <v-avatar><v-img :src="blog.user_icon"></v-img></v-avatar>
+          <v-avatar><v-img :src="blog.icon"></v-img></v-avatar>
           <v-list-item-content>
             <v-list-item-title class="headline">
               <a
