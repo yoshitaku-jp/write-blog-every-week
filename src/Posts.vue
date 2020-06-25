@@ -31,7 +31,7 @@
           <a
             class="black--text"
             style="text-decoration: none;"
-            :href="blog.entry_url"
+            :href="blog.entry_link"
             target="_blank"
             >{{ blog.entry_title }}</a
           >
