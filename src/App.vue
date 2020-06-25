@@ -1,14 +1,19 @@
 <template>
   <v-app>
+    <v-app-bar app>
       <page-header></page-header>
+    </v-app-bar>
+    <v-main>
       <router-view></router-view>
+    </v-main>
+    <v-footer app>
       <page-footer></page-footer>
+    </v-footer>
   </v-app>
 </template>
 
 <script>
 import Vue from 'vue';
-window.Vue = Vue;
 import VueGtm from 'vue-gtm';
 
 import PageHeader from './components/PageHeader';
