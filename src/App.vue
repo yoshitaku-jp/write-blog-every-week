@@ -1,8 +1,6 @@
 <template>
   <v-app>
-    <v-app-bar app v-if="$route.name !== 'home'">
-      <page-header></page-header>
-    </v-app-bar>
+    <page-header v-if="$route.name !== 'home'"></page-header>
     <v-main>
       <router-view></router-view>
     </v-main>
