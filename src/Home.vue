@@ -81,7 +81,7 @@
             <v-col class='col-md-6 col-12'>
               <v-card>
                 <v-card-title class='justify-center font-weight-black text-uppercase'>twitter</v-card-title>
-                <v-card-text class='text-center'><a href='https:twitter.com/yoshitaku_jp' target=”_blank”>yoshitaku_jp</a></v-card-text>
+                <v-card-text class='text-center'><a href="https://twitter.com/yoshitaku_jp" target=”_blank”>yoshitaku_jp</a></v-card-text>
               </v-card>
             </v-col>
           </v-row>
