@@ -1,10 +1,10 @@
 <template>
-    <v-container fluid>
-      <v-row
-          align-content="space-around"
-          justify="space-around"
-          class="grey lighten-5"
-        >
+  <v-container fluid>
+    <v-row
+      align-content="space-around"
+      justify="space-around"
+      class="grey lighten-5"
+    >
       <v-card
         class="grey ma-2"
         width="400px"
@@ -12,7 +12,7 @@
         :key="blog.id"
       >
         <v-list-item>
-          <v-avatar><v-img :src="blog.icon"></v-img></v-avatar>
+          <v-avatar class="mr-5"><v-img :src="blog.icon"></v-img></v-avatar>
           <v-list-item-content>
             <v-list-item-title class="headline">
               <a
@@ -37,24 +37,24 @@
           >
         </v-card-text>
       </v-card>
-      </v-row>
-    </v-container>
+    </v-row>
+  </v-container>
 </template>
 
 <script>
-import axios from 'axios';
-import _ from 'lodash';
+import axios from "axios";
+import _ from "lodash";
 
 export default {
-  name: 'Posts',
+  name: "Posts",
   data() {
     return {
-      blogs: []
+      blogs: [],
     };
   },
   created: function() {
     var _this = this;
-    const URL = 'https://api-wbew.netlify.app/blogs.json';
+    const URL = "https://api-wbew.netlify.app/blogs.json";
 
     axios.get(URL).then(function(response) {
       _this.blogs = response.data;
@@ -64,4 +64,3 @@ export default {
 </script>
 
 <style scoped></style>
-

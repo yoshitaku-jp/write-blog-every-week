@@ -90,7 +90,6 @@
     </section>
     <v-divider></v-divider>
     <section>
- <!--     <v-parallax src="https://images.unsplash.com/photo-1510915228340-29c85a43dcfe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80">-->
       <v-container>
         <v-row style="height: 480px" 
           align="center"
@@ -103,7 +102,6 @@
           </v-col>
         </v-row>
       </v-container>
-<!--      </v-parallax>-->
     </section>
   </v-main>
 </template>
