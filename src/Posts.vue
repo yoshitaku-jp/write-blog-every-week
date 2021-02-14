@@ -1,42 +1,40 @@
 <template>
-  <v-container fluid>
-    <v-row
-      align-content="space-around"
-      justify="space-around"
-      class="grey lighten-5"
-    >
-      <v-card
-        class="grey ma-2"
-        width="400px"
-        v-for="blog in blogs"
-        :key="blog.id"
-      >
-        <v-list-item>
-          <v-avatar class="mr-5"><v-img :src="blog.icon"></v-img></v-avatar>
-          <v-list-item-content>
-            <v-list-item-title class="headline">
-              <a
-                class="black--text"
-                style="text-decoration: none;"
-                :href="blog.url"
-                target="_blank"
-                >{{ blog.name }}</a
-              >
-            </v-list-item-title>
+  <v-container class="d-flex flex-wrap ">
+    <v-row>
+      <v-col v-for="blog in blogs" :key="blog.id">
+        <v-card class="d-flex flex-column grey" width="350px">
+          <v-list-item>
+            <v-avatar class="ma-2"><v-img :src="blog.icon"></v-img></v-avatar>
+            <v-list-item-content>
+              <v-list-item-title>
+                <a
+                  class="black--text"
+                  style="text-decoration: none;"
+                  :href="blog.url"
+                  target="_blank"
+                  >{{ blog.name }}</a
+                >
+              </v-list-item-title>
 
-            <v-list-item-subtitle>by {{ blog.user_name }}</v-list-item-subtitle>
-          </v-list-item-content>
-        </v-list-item>
-        <v-card-text>
-          <a
-            class="black--text"
-            style="text-decoration: none;"
-            :href="blog.entry_link"
-            target="_blank"
-            >{{ blog.entry_title }}</a
-          >
-        </v-card-text>
-      </v-card>
+              <v-list-item-subtitle class="pl-4"
+                ><span class="font-italic">written by</span>
+                <span class="font-weight-bold">{{
+                  blog.user_name
+                }}</span></v-list-item-subtitle
+              >
+            </v-list-item-content>
+          </v-list-item>
+          <v-card-text>
+            <a
+              class="black--text"
+              style="text-decoration: none;"
+              :href="blog.entry_link"
+              target="_blank"
+              >{{ blog.entry_title }}</a
+            >
+          </v-card-text>
+        </v-card>
+      </v-col>
     </v-row>
   </v-container>
 </template>

@@ -2,14 +2,13 @@
   <v-main>
     <section>
       <v-container>
-        <v-row style="height: 480px" class='align-center justify-center'>
           <v-col class='text-center'>
             <p class="display-3 font-weight-black">Everything is output</p>
             <p class="display-5 font-weight-black">Write Blog Every Week</p>
-            <div class="py-12"></div>
-            <v-btn to="/posts">CHECK <br>members posts</v-btn>
+            <v-btn to="/posts">
+              <span>CHECK<br>members posts</span>
+            </v-btn>
           </v-col>
-        </v-row>
       </v-container>
     </section>
     <v-divider></v-divider>
