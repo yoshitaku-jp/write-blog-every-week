@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar app class="text-center">
+  <v-app-bar app>
     <v-btn to="/" text>
       <v-toolbar-title class="display-2 font-weight-black "
         >Write Blog Every Week</v-toolbar-title
