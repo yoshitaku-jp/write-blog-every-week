@@ -1,14 +1,12 @@
 <template>
   <v-app-bar app>
-    <v-btn to="/" text>
-      <v-toolbar-title class="display-2 font-weight-black "
-        >Write Blog Every Week</v-toolbar-title
-      >
-    </v-btn>
-    <v-tabs>
-      <v-tab to="/">Top</v-tab>
-      <v-tab to="/posts">Posts</v-tab>
-    </v-tabs>
+    <v-toolbar-title class="display-2 font-weight-black ">
+      <router-link class="black--text text-decoration-none" to="/">
+        Write Blog Every Week
+      </router-link>
+    </v-toolbar-title>
+    <v-tab to="/">Top</v-tab>
+    <v-tab to="/posts">Posts</v-tab>
   </v-app-bar>
 </template>
 
