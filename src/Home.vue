@@ -12,14 +12,14 @@
 
     <v-divider></v-divider>
     <v-container>
-      <v-row>
+      <v-row align="center" justify="center">
         <v-col>
           <div class="display-3 font-weight-black text-md-left">
             <p>毎週<br />ブログを書く<br />ただ<br />それだけ</p>
           </div>
         </v-col>
         <v-col>
-          <p justify="center">
+          <p>
             <span class="display-5 font-weight-black"
               >Write Blog Every Week</span
             >
