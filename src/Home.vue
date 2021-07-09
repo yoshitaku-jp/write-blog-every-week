@@ -14,32 +14,32 @@
     <v-container>
       <v-row align="center" justify="center">
         <v-col>
-          <div class="display-3 font-weight-black text-md-left">
+          <div class="display-3 font-weight-black text-right mr-10">
             <p>毎週<br />ブログを書く<br />ただ<br />それだけ</p>
           </div>
         </v-col>
         <v-col>
-          <p>
+          <p class="ml-10">
             <span class="display-5 font-weight-black"
               >Write Blog Every Week</span
             >
             は週に1記事ブログを書くコミュニティです。<br />
             記事の内容はどんなことでも構いません。<br />
-            日記、学習のメモ、テクノロジーについて...
+            日記、学習のメモ、テクノロジーについて...<br />
             まずはアウトプットを習慣づけましょう。
           </p>
         </v-col>
       </v-row>
     </v-container>
     <v-divider></v-divider>
-    <v-container>
+    <v-container style="height: 320px">
       <v-row>
         <v-col class="text-center">
           <p class="display-3 font-weight-black">RULE</p>
         </v-col>
       </v-row>
-      <v-row>
-        <v-col class="col-md-4 col-12">
+      <v-row align="center" justify="center">
+        <v-col class="col-md-3 col-12">
           <v-card>
             <v-card-title
               class="justify-center font-weight-black text-uppercase"
@@ -48,7 +48,7 @@
             <v-card-text class="text-center">週に1記事書き上げる</v-card-text>
           </v-card>
         </v-col>
-        <v-col class="col-md-4 col-12">
+        <v-col class="col-md-3  col-12">
           <v-card>
             <v-card-title
               class="justify-center font-weight-black text-uppercase"
@@ -59,7 +59,7 @@
             >
           </v-card>
         </v-col>
-        <v-col class="col-md-4 col-12">
+        <v-col class="col-md-3  col-12">
           <v-card>
             <v-card-title
               class="justify-center font-weight-black text-uppercase"
@@ -73,14 +73,14 @@
       </v-row>
     </v-container>
     <v-divider></v-divider>
-    <v-container>
+    <v-container style="height: 320px">
       <v-row>
         <v-col class="text-center">
           <p class="display-3 font-weight-black">CONTACT</p>
         </v-col>
       </v-row>
-      <v-row>
-        <v-col class="col-md-6 col-12">
+      <v-row align="center" justify="center">
+        <v-col class="col-md-3 col-12">
           <v-card>
             <v-card-title
               class="justify-center font-weight-black text-uppercase"
@@ -94,7 +94,7 @@
             >
           </v-card>
         </v-col>
-        <v-col class="col-md-6 col-12">
+        <v-col class="col-md-3 col-12">
           <v-card>
             <v-card-title
               class="justify-center font-weight-black text-uppercase"
