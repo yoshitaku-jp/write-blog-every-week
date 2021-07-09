@@ -35,29 +35,6 @@
   </v-container>
 </template>
 
-<!--　blog.url
-
-                <a
-                  class="black--text"
-                  style="text-decoration: none;"
-                  :href="blog.url"
-                  target="_blank"
-                  >{{ blog.name }}</a
-                >
-                <span class="font-weight-bold">{{
-                  blog.user_name
-                }}
-            <a
-              class="black--text"
-              style="text-decoration: none;"
-              :href="blog.entry_link"
-              target="_blank"
-              >{{ blog.entry_title }}</a
-            >
-
-
--->
-
 <script>
 import axios from "axios";
 import _ from "lodash";
