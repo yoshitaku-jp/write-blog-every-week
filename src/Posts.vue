@@ -1,12 +1,42 @@
 <template>
-  <v-container class="d-flex flex-wrap ">
-    <v-row>
-      <v-col v-for="blog in blogs" :key="blog.id">
-        <v-card class="d-flex flex-column grey" width="350px">
-          <v-list-item>
-            <v-avatar class="ma-2"><v-img :src="blog.icon"></v-img></v-avatar>
-            <v-list-item-content>
-              <v-list-item-title>
+  <v-container>
+    <v-row
+      v-for="blog in blogs"
+      :key="blog.id"
+      class="text-center"
+      justify="center"
+      ><v-col cols="6">
+        <v-list-item>
+          <v-list-item-content>
+            <v-list-item-title
+              ><a
+                class="black--text"
+                style="text-decoration: none;"
+                :href="blog.url"
+                target="_blank"
+                >{{ blog.name }}</a
+              >
+              - written by {{ blog.user_name }}</v-list-item-title
+            >
+            <v-list-item-subtitle class="mt-5">
+              <a
+                class="black--text"
+                style="text-decoration: none;"
+                :href="blog.entry_link"
+                target="_blank"
+                >{{ blog.entry_title }}</a
+              >
+              <v-divider class="mt-12" :inset="inset"></v-divider>
+            </v-list-item-subtitle>
+          </v-list-item-content>
+        </v-list-item>
+      </v-col>
+    </v-row>
+  </v-container>
+</template>
+
+<!--　blog.url
+
                 <a
                   class="black--text"
                   style="text-decoration: none;"
@@ -14,17 +44,9 @@
                   target="_blank"
                   >{{ blog.name }}</a
                 >
-              </v-list-item-title>
-
-              <v-list-item-subtitle class="pl-4"
-                ><span class="font-italic">written by</span>
                 <span class="font-weight-bold">{{
                   blog.user_name
-                }}</span></v-list-item-subtitle
-              >
-            </v-list-item-content>
-          </v-list-item>
-          <v-card-text>
+                }}
             <a
               class="black--text"
               style="text-decoration: none;"
@@ -32,12 +54,9 @@
               target="_blank"
               >{{ blog.entry_title }}</a
             >
-          </v-card-text>
-        </v-card>
-      </v-col>
-    </v-row>
-  </v-container>
-</template>
+
+
+-->
 
 <script>
 import axios from "axios";
